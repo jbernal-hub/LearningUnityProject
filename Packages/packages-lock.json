@@ -1,5 +1,42 @@
 {
   "dependencies": {
+    "com.entalto.platformsetup": {
+      "version": "https://github.com/EntaltoStudios/Entalto-PlatformSetup.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
+      },
+      "hash": "dc7ceff1b1832f1b35591f2f5c71e1b3beb9effa"
+    },
+    "com.entalto.ps5.savesystem": {
+      "version": "https://github.com/EntaltoStudios/Entalto-PS5-SaveSystem.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.savedata.ps5": "1.1.3",
+        "com.unity.inputsystem.ps5": "0.2.2-preview",
+        "com.unity.commondialog.ps5": "1.0.5"
+      },
+      "hash": "644668b9c7e5497fc6f0dbee7aae6636d4a3ea74"
+    },
+    "com.entalto.utils": {
+      "version": "https://github.com/EntaltoStudios/Utils.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "ab53037365c230cb0999656315e4058d6c96cd1f"
+    },
+    "com.entalto.virtualmountpoint": {
+      "version": "https://github.com/EntaltoStudios/Entalto-VirtualMountPoint.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.entalto.utils": "https://github.com/EntaltoStudios/Utils.git#main",
+        "com.unity.nuget.newtonsoft-json": "3.0.0"
+      },
+      "hash": "3d3b691a0f5e8a7e7008e548c129e867eaa5c519"
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
@@ -45,6 +82,12 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.commondialog.ps5": {
+      "version": "file:\\\\ENTALTO_SERVER\\EntaltoShare\\Resources\\UnityPackages\\PS5\\com.unity.commondialog.ps5-1.1.0.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {}
+    },
     "com.unity.ext.nunit": {
       "version": "2.0.5",
       "depth": 1,
@@ -78,6 +121,14 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.inputsystem.ps5": {
+      "version": "file:\\\\ENTALTO_SERVER\\EntaltoShare\\Resources\\UnityPackages\\PS5\\com.unity.inputsystem.ps5-1.0.2.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "com.unity.inputsystem": "1.10.0"
+      }
+    },
     "com.unity.mathematics": {
       "version": "1.3.3",
       "depth": 2,
@@ -100,6 +151,13 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.render-pipelines.core": {
       "version": "17.3.0",
       "depth": 1,
@@ -113,6 +171,12 @@
         "com.unity.modules.terrain": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       }
+    },
+    "com.unity.render-pipelines.ps5": {
+      "version": "file:\\\\ENTALTO_SERVER\\EntaltoShare\\Resources\\UnityPackages\\PS5\\com.unity.render-pipelines.ps5-1.10.2.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {}
     },
     "com.unity.render-pipelines.universal": {
       "version": "17.3.0",
@@ -131,6 +195,12 @@
       "dependencies": {
         "com.unity.render-pipelines.core": "17.0.3"
       }
+    },
+    "com.unity.savedata.ps5": {
+      "version": "file:\\\\ENTALTO_SERVER\\EntaltoShare\\Resources\\UnityPackages\\PS5\\com.unity.savedata.ps5-1.3.1.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {}
     },
     "com.unity.searcher": {
       "version": "4.9.4",

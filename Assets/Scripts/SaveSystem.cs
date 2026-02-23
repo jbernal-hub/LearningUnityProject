@@ -32,9 +32,9 @@ public class SaveSystem
 
     private void Load()
     {
-        if (File.Exists(SAVING_PATH))
+        if (VirtualMountPoint.Exists(SAVING_PATH))
         {
-            string readData = File.ReadAllText(SAVING_PATH);
+            VirtualMountPoint.Read(SAVING_PATH, out string readData);
             currentSavedData = JsonUtility.FromJson<SavedData>(readData);
         }
         else
@@ -47,6 +47,7 @@ public class SaveSystem
     public void Save()
     {
         string jsonData = JsonUtility.ToJson(currentSavedData);
-        File.WriteAllText(SAVING_PATH, jsonData);
+        VirtualMountPoint.Write(SAVING_PATH, jsonData);
+        VirtualMountPoint.UpdateInDisk();
     }
 }

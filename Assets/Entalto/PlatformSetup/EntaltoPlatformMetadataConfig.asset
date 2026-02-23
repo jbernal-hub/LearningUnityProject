@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1751875b8dd85494f80ac2ce1a069b41, type: 3}
+  m_Name: EntaltoPlatformMetadataConfig
+  m_EditorClassIdentifier: 
+  m_AppNameFullVersion: 
+  m_AppNameDemo: 
+  ps4: 0
+  ps5: 0
+  xbox: 0
+  switchPlatform: 0
+  steam: 0
+  stove: 0
+  m_ItHasDemo: 0
+  m_UsesTransfer: 0
+  m_WizardExecutedAlready: 0
+  m_PS5SharedBinarySystemFoldersPathFullGame: ProjectSettings/FullGame/PS5/sce_sys
+  m_PS5PassCodeFullGame: 
+  m_PS5FingerprintFullGame: 
+  m_PS5TitleIDFullGame: 
+  m_PS5SharedBinarySystemFoldersPathDemo: ProjectSettings/Demo/PS5/sce_sys
+  m_PS5PassCodeDemo: 
+  m_PS5FingerprintDemo: 
+  m_PS5TitleIDDemo: 
+  m_PS4ContentIDFullGame: 
+  m_PS4TitleIDFullGame: 
+  m_PS4ParamSfxPathFullGame: 
+  m_PS4AppTypeFullGame: 0
+  m_PS4PasscodeFullGame: 
+  m_PS4IconImagesFolderFullGame: ProjectSettings/FullGame/PS4/App_Assets
+  m_PS4BackgroundImagePathFullGame: ProjectSettings/FullGame/PS4/App_Assets/pic0.png
+  m_PS4StartupImagePathFullGame: ProjectSettings/FullGame/PS4/App_Assets/pic1.png
+  m_PS4BGMPathFullGame: ProjectSettings/FullGame/PS4/App_Assets/snd0.at9
+  m_PS4PronunciationXMLPathFullGame: ProjectSettings/FullGame/PS4/App_Assets/pronunciation.xml
+  m_PS4PronunciationSIGPathFullGame: ProjectSettings/FullGame/PS4/App_Assets/pronunciation.sig
+  m_PS4NpTrophyPackPathFullGame: ProjectSettings/FullGame/PS4/App_Assets/Trophies.trp
+  m_PS4NpTitleDatPathFullGame: 
+  m_PS4ContentIDDemo: 
+  m_PS4TitleIDDemo: 
+  m_PS4ParamSfxPathDemo: 
+  m_PS4AppTypeDemo: 2
+  m_PS4PasscodeDemo: 
+  m_PS4IconImagesFolderDemo: ProjectSettings/Demo/PS4/App_Assets
+  m_PS4BackgroundImagePathDemo: ProjectSettings/Demo/PS4/App_Assets/pic0.png
+  m_PS4StartupImagePathDemo: ProjectSettings/Demo/PS4/App_Assets/pic1.png
+  m_PS4BGMPathDemo: ProjectSettings/Demo/PS4/App_Assets/snd0.at9
+  m_PS4PronunciationXMLPathDemo: ProjectSettings/Demo/PS4/App_Assets/pronunciation.xml
+  m_PS4PronunciationSIGPathDemo: ProjectSettings/Demo/PS4/App_Assets/pronunciation.sig
+  m_PS4NpTrophyPackPathDemo: 
+  m_PS4NpTitleDatPathDemo: 
+  m_XboxSCIDFullGame: 00000000-0000-0000-0000-00000000000
+  m_XboxFilesPathFullGame: ProjectSettings\FullGame\Xbox
+  m_XboxSCIDDemo: 00000000-0000-0000-0000-00000000000
+  m_XboxFilesPathDemo: ProjectSettings\Demo\Xbox
+  m_SwitchNMetaPathFullGame: ProjectSettings/FullGame/NintendoSwitch/SwitchNMeta.nmeta
+  m_SwitchNMetaPathDemo: ProjectSettings/Demo/NintendoSwitch/SwitchNMeta.nmeta

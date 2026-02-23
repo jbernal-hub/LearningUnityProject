@@ -33,44 +33,6 @@ public class Player : BasicUnit
         transform.position = data.playerPosition;
     }
 
-    public void AddEnemy(Enemy enemy)
-    {
-        enemies.Add(enemy);
-        enemy.AddOnDeath(EnemyKilled);
-    }
-
-    public void RemoveEnemy(Enemy enemy)
-    {
-        enemies.Remove(enemy);
-        enemy.RemoveOnDeath(EnemyKilled);
-    }
-
-    private void EnemyKilled(Enemy enemy)
-    {
-        killedEnemies++;
-        enemiesDeadCount.text = $"{killedEnemies} kills";
-
-        SaveAllData();
-    }
-
-    private void SaveAllData()
-    {
-        SavedData data = SaveSystem.GetInstance().CurrentSavedData;
-        data.currentHealth = CurrentHealth;
-        data.playerPosition = transform.position;
-        data.amountOfKills = killedEnemies;
-        data.amountOfEnemies = enemies.Count;
-        Vector3[] enemiesPositions = new Vector3[data.amountOfEnemies];
-        for (int i = 0; i < data.amountOfEnemies; i++)
-        {
-            enemiesPositions[i] = enemies[i].transform.position;
-        }
-        data.enemiesPositions = enemiesPositions;
-
-        SaveSystem.GetInstance().CurrentSavedData = data;
-        SaveSystem.GetInstance().Save();
-    }
-
     protected override void Update()
     {
         if (!Alive)
@@ -120,13 +82,51 @@ public class Player : BasicUnit
     {
         moveAction.action.Disable();
     }
+
+    public void AddEnemy(Enemy enemy)
+    {
+        enemies.Add(enemy);
+        enemy.AddOnDeath(EnemyKilled);
+    }
+
+    public void RemoveEnemy(Enemy enemy)
+    {
+        enemies.Remove(enemy);
+        enemy.RemoveOnDeath(EnemyKilled);
+    }
+
+    private void EnemyKilled(Enemy enemy)
+    {
+        killedEnemies++;
+        enemiesDeadCount.text = $"{killedEnemies} kills";
+
+        SaveAllData();
+    }
+
+    private void SaveAllData()
+    {
+        SavedData data = SaveSystem.GetInstance().CurrentSavedData;
+        data.currentHealth = CurrentHealth;
+        data.playerPosition = transform.position;
+        data.amountOfKills = killedEnemies;
+        data.amountOfEnemies = enemies.Count;
+        Vector3[] enemiesPositions = new Vector3[data.amountOfEnemies];
+        for (int i = 0; i < data.amountOfEnemies; i++)
+        {
+            enemiesPositions[i] = enemies[i].transform.position;
+        }
+        data.enemiesPositions = enemiesPositions;
+
+        SaveSystem.GetInstance().CurrentSavedData = data;
+        SaveSystem.GetInstance().Save();
+    }
     private void Move(float dt)
     {
         Vector2 input = moveAction.action.ReadValue<Vector2>();
 
         Vector3 direction = new Vector3(input.x, 0f, input.y);
 
-        transform.position += direction * speed * dt;
+        transform.position += direction * (speed * dt);
     }
 
     private IEnumerator RestartGame()
