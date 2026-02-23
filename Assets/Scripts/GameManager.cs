@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
@@ -20,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        if (newGame)
+        if (newGame || SaveSystem.GetInstance().CurrentSavedData.currentHealth == 0)
         {
             SaveSystem.GetInstance().CurrentSavedData = new SavedData();
             SaveSystem.GetInstance().Save();
@@ -49,7 +50,7 @@ public class GameManager : MonoBehaviour
             currentEnemyTimeSpawn = 0f;
         }
         // aquí quiero spawnear un enemigo cada vez que pase un intervalo de tiempo "enemyTimeSpawn"
-        // el tiempo es con Time.time o con delta.time? 
+        // el tiempo es con Time.time o con delta.time?
     }
 
     public void SpawnEnemy(Vector3 position = default)

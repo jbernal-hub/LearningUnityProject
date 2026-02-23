@@ -1,9 +1,11 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : BasicUnit
 {
@@ -101,6 +103,12 @@ public class Player : BasicUnit
         {
             TakeDamage(b.Damage);
             healthSlider.value = CurrentHealth;
+
+            if (!Alive)
+            {
+                SaveAllData();
+                StartCoroutine(RestartGame());
+            }
         }
     }
     private void OnEnable()
@@ -119,6 +127,19 @@ public class Player : BasicUnit
         Vector3 direction = new Vector3(input.x, 0f, input.y);
 
         transform.position += direction * speed * dt;
+    }
+
+    private IEnumerator RestartGame()
+    {
+        float currentTime = 0;
+        const float time = 2f;
+        while (currentTime < time)
+        {
+            yield return null;
+            currentTime += Time.deltaTime;
+        }
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 }
